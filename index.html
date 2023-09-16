@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Catalogue</title>
   </head>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -13,10 +13,10 @@
     rel="stylesheet"
   />
   <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <a href="#" class="nav-logo">furni<span>vul</span></a>
       <div class="nav-links">
-        <a href="#home">Home</a>
+        <a href="#home" class="active-link">Home</a>
         <a href="#about">About</a>
         <a href="#catalogue">Catalogue</a>
         <a href="#contact">Contact</a>
@@ -31,13 +31,13 @@
     <section class="hero-section" id="home">
       <main class="content">
         <h1>furni<span>vul</span></h1>
-        <p>Find the furniture that suits your needs!</p>
-        <a href="#catalogue" class="cta">Browse</a>
+        <p>Temukan furniture sesuai kebutuhan anda!</p>
+        <a href="#catalogue" class="cta">Telusuri</a>
       </main>
     </section>
 
     <section class="about" id="about">
-      <h2>About<span> Us</span></h2>
+      <h2>Tentang<span> Kami</span></h2>
       <div class="row reveal">
         <div class="about-img">
           <img src="./images/logo/furnivul-logos.png" alt="about images" />
@@ -45,20 +45,25 @@
         <div class="content">
           <h3>furni<span>vul</span></h3>
           <p>
-            is a dedicated platform in the field of furniture, offering an
-            extensive collection of high-quality furniture items for discerning
-            customers. Our marketplace showcases an array of furniture styles,
-            ranging from contemporary and modern to classic and antique pieces,
-            catering to diverse tastes and preferences.
+            adalah platform marketplace yang menyediakan beragam pilihan
+            furniture berkualitas tinggi untuk memenuhi kebutuhan dekorasi rumah
+            Anda. Dengan koleksi yang luas dan beragam, kami membantu Anda
+            menemukan furnitur yang sesuai dengan gaya dan selera Anda. furnivul
+            berkomitmen untuk memberikan pengalaman berbelanja yang mudah, aman,
+            dan nyaman. <br />Kami bekerja sama dengan penjual terpercaya dan
+            menyediakan informasi detail serta ulasan pelanggan untuk memastikan
+            Anda mendapatkan produk yang berkualitas. Kami percaya bahwa setiap
+            rumah memiliki cerita uniknya sendiri, dan kami ingin membantu Anda
+            menciptakan ruangan yang anda cintai.
           </p>
-          <a href="#" class="cta">More</a>
+          <a href="#" class="cta">Selengkapnya</a>
         </div>
       </div>
     </section>
 
     <section class="catalogue" id="catalogue">
-      <h2>Cata<span>logue</span></h2>
-      <p>find yo<span>ur furniture by cate</span>gories</p>
+      <h2>Kata<span>log</span></h2>
+      <p>Temu<span>kan Furnitur Berdasarkan</span> Kategori</p>
       <div class="row">
         <div class="catalogue-card reveal">
           <img
@@ -66,8 +71,8 @@
             alt="living room"
             class="catalogue-card-img"
           />
-          <h3 class="catalogue-card-title">Living Room</h3>
-          <a href="#" class="catalogue-card-cta">See Category</a>
+          <h3 class="catalogue-card-title">Ruang Tamu</h3>
+          <a href="#" class="catalogue-card-cta">lihat selengkapnya</a>
         </div>
         <div class="catalogue-card reveal">
           <img
@@ -75,8 +80,8 @@
             alt="Workspace"
             class="catalogue-card-img"
           />
-          <h3 class="catalogue-card-title">Workspace Room</h3>
-          <a href="#" class="catalogue-card-cta">See Category</a>
+          <h3 class="catalogue-card-title">Ruang Kerja</h3>
+          <a href="#" class="catalogue-card-cta">lihat selengkapnya</a>
         </div>
         <div class="catalogue-card reveal">
           <img
@@ -84,8 +89,8 @@
             alt="Kitchen"
             class="catalogue-card-img"
           />
-          <h3 class="catalogue-card-title">Kitchen</h3>
-          <a href="#" class="catalogue-card-cta">See Category</a>
+          <h3 class="catalogue-card-title">Dapur</h3>
+          <a href="#" class="catalogue-card-cta">lihat selengkapnya</a>
         </div>
         <div class="catalogue-card reveal">
           <img
@@ -93,8 +98,8 @@
             alt="Bedroom"
             class="catalogue-card-img"
           />
-          <h3 class="catalogue-card-title">Bed Room</h3>
-          <a href="#" class="catalogue-card-cta">See Category</a>
+          <h3 class="catalogue-card-title">Kamar Tidur</h3>
+          <a href="#" class="catalogue-card-cta">lihat selengkapnya</a>
         </div>
         <div class="catalogue-card reveal">
           <img
@@ -102,8 +107,8 @@
             alt="Bathroom"
             class="catalogue-card-img"
           />
-          <h3 class="catalogue-card-title">Bath Room</h3>
-          <a href="#" class="catalogue-card-cta">See Category</a>
+          <h3 class="catalogue-card-title">Kamar Mandi</h3>
+          <a href="#" class="catalogue-card-cta">lihat selengkapnya</a>
         </div>
         <div class="catalogue-card reveal">
           <img
@@ -111,15 +116,16 @@
             alt="Antique"
             class="catalogue-card-img"
           />
-          <h3 class="catalogue-card-title">Antique</h3>
-          <a href="#" class="catalogue-card-cta">See Category</a>
+          <h3 class="catalogue-card-title">Furnitur Antik</h3>
+          <a href="#" class="catalogue-card-cta">lihat selengkapnya</a>
         </div>
       </div>
+      <a href="" class="cta reveal">Eksplorasi</a>
     </section>
 
     <section class="contact" id="contact">
-      <h2>Contact <span>Us</span></h2>
-      <p>Get in Touch – <span>We're Here to Assist You!</span></p>
+      <h2>Hubungi <span>Kami</span></h2>
+      <p>Hubungi Kami – <span>Kami Siap Membantu Anda!</span></p>
       <div class="row reveal">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.754246284119!2d112.65365947639884!3d-7.154387492850071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd801f241061b6d%3A0x66bf047dc08eee28!2sBANDAR%20GRISSEE!5e0!3m2!1sid!2sid!4v1694705199402!5m2!1sid!2sid"
@@ -129,7 +135,7 @@
           class="map"
         ></iframe>
 
-        <form action="">
+        <form action="" id="form">
           <div class="input-group">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +152,37 @@
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
-            <input type="text" class="Name" placeholder="Name" />
+            <input
+              type="text"
+              class="Name"
+              name="name"
+              placeholder="Nama lengkap"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-at-sign"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+            </svg>
+            <input
+              type="text"
+              class="E-Mail"
+              name="email"
+              placeholder="Alamat E-Mail"
+              required
+            />
           </div>
           <div class="input-group">
             <svg
@@ -166,31 +202,46 @@
               ></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            <input type="text" class="E-Mail" placeholder="E-Mail" />
+            <input
+              type="text"
+              class="message"
+              name="message"
+              placeholder="Tuliskan pesan atau pertanyaan Anda disini..."
+              required
+            />
           </div>
-          <div class="input-group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-phone"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-              ></path>
-            </svg>
-            <input type="text" class="Phone" placeholder="Phone" />
-          </div>
-          <button type="submit" class="btn">Send</button>
+          <button type="submit" class="btn" id="btnSnack">Kirim</button>
         </form>
       </div>
     </section>
+
+    <section class="register" id="register">
+      <h2 class="">Segera bergabung sebagai penjual!</h2>
+      <p class="">
+        Dengan mendaftar sebagai penjual, Kami akan mempromosikan serta membantu
+        transaksi penjualan furnitur
+      </p>
+      <div class="register-input reveal">
+        <form action="" id="regis">
+          <input
+            class="register-email"
+            type="email"
+            placeholder="Masukkan Alamat E-Mail Anda..."
+            name="register-email"
+          />
+          <button type="submit" class="register-cta" id="regisSnack">
+            Daftar
+          </button>
+        </form>
+      </div>
+    </section>
+    <div id="notification">
+      Terima kasih telah menghubungi kami, kami akan membalas pesan anda
+      secepatnya.
+    </div>
+    <div id="register-notification">
+      Terima kasih telah mendaftar, kami akan mengirimkan formulir pendaftaran melalui alamat E-Mail Anda.
+    </div>
   </body>
   <footer>
     <div class="socials">

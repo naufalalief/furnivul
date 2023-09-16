@@ -28,14 +28,17 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 4%;
-  background-color: rgba(33, 37, 41, 0.8);
-  border-bottom: 1px solid #6c757d;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99999;
 }
+.scroll-header {
+  background-color: rgba(33, 37, 41, 0.8);
+  border-bottom: 1px solid #6c757d;
+}
+
 .navbar .nav-logo {
   font-size: 2rem;
   font-weight: 700;
@@ -44,8 +47,9 @@ body {
 .navbar .nav-logo span {
   color: var(--primary);
 }
-.navbar .nav-links a {
-  color: white;
+.navbar .nav-links a,
+.navbar .nav-links a .active-link {
+  color: var(--primary);
   display: inline-block;
   font-size: 1.2rem;
   margin: 0 1rem;
@@ -64,7 +68,6 @@ body {
   transform: scaleX(0.7);
   transition: 0.1s linear;
 }
-
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -110,7 +113,9 @@ body {
   text-shadow: 1px 1px 3px rgba(33, 37, 41, 0.5);
 }
 .hero-section .content .cta,
-.about .row .content .cta {
+.about .row .content .cta,
+.catalogue a.cta,
+.register .register-input button {
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -126,13 +131,15 @@ body {
 
 .about,
 .catalogue,
-.contact {
+.contact,
+.register {
   padding: 10rem 4% 1.4rem;
   margin-bottom: 8rem;
 }
 .about h2,
 .catalogue h2,
-.contact h2 {
+.contact h2,
+.register h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
@@ -179,7 +186,8 @@ body {
   margin-bottom: 0;
 }
 .catalogue p,
-.contact p {
+.contact p,
+.register p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -217,6 +225,13 @@ body {
   text-decoration: underline;
   color: white;
 }
+.catalogue a.cta {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+}
 /* Contact */
 .contact .row {
   display: flex;
@@ -246,14 +261,18 @@ body {
   border-radius: 0.5rem;
 }
 
-.contact .row form .input-group input {
+.contact .row form .input-group input,
+.register .register-input input {
   width: 100%;
   padding: 2rem;
+  margin: 1rem;
   font-size: 1.5rem;
   background: none;
   color: white;
+  border-radius: 0.5rem;
 }
-.contact .row form .btn {
+.contact .row form .btn,
+.register .register-input button {
   margin-top: 3rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -262,6 +281,40 @@ body {
   background-color: var(--secondary);
   cursor: pointer;
   border-radius: 0.5rem;
+}
+.contact .row form .btn svg {
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: bottom;
+}
+.register p {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.5;
+}
+.register .register-input {
+  background-color: var(--bsecond);
+  border-radius: 0.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+.register .register-input form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.register .register-input form .register-email {
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 0.5rem;
+}
+.register .register-input form .register-cta {
+  margin: 1rem;
+  cursor: pointer;
 }
 .reveal {
   transform: translateY(50px);
@@ -303,6 +356,73 @@ footer .copy a {
   color: var(--secondary);
   font-weight: 700;
 }
+#notification,
+#register-notification {
+  visibility: hidden;
+  min-width: 250px;
+  margin-right: 5rem;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: fixed;
+  z-index: 1;
+  right: 0rem;
+  bottom: 1rem;
+  font-weight: 100;
+}
+
+#notification.show,
+#register-notification.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 1rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 1rem;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 1rem;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 1rem;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -319,7 +439,7 @@ footer .copy a {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #ffffff;
+    background-color: var(--bsecond);
     width: 30rem;
     height: 100vh;
     transition: 0.5s;
