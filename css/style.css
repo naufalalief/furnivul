@@ -300,7 +300,7 @@ footer .copy {
   font-size: 0.8rem;
 }
 footer .copy a {
-  color: var(--bg);
+  color: var(--secondary);
   font-weight: 700;
 }
 @media (max-width: 1366px) {
