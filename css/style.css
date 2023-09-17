@@ -148,7 +148,8 @@ body {
 .catalogue h2 span,
 .catalogue p span,
 .contact h2 span,
-.contact p span {
+.contact p span,
+.register h2 span {
   color: var(--primary);
 }
 /* About */
@@ -287,10 +288,14 @@ body {
   margin-right: 1rem;
   vertical-align: bottom;
 }
+/* regis */
+.register h2{
+  margin-bottom: 0;
+}
 .register p {
   text-align: center;
   margin-bottom: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 100;
   line-height: 1.5;
 }
@@ -305,6 +310,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 2rem;
 }
 .register .register-input form .register-email {
   padding: 1rem;
